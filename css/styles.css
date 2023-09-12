@@ -28,6 +28,7 @@
 header{
     background: rgba(255, 144, 14, 0.10);
     padding: 30px 200px;
+    margin-bottom: 80px;
 }
 
 header nav{
@@ -81,6 +82,45 @@ nav ul li a{
 .banner img{
     margin-top: 30px;
     width: 100%;
+}
+
+/* main style */
+main{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* teams section styles */
+.teams-section{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.teams-img-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.teams-content{
+    padding: 0 30px;
+}
+.teams-title{
+    font-size: 2.3rem;
+}
+
+.teams-title #dark-gray{
+    color: #727272;
+    font-weight: 500;
+}
+
+.teams-title #primary{
+    color: #FF900E;
+    font-weight: 700;
+}
+.teams-description{
+    color: #727272;
+    margin: 20px 0;
 }
 
 /* responsive media queries */
