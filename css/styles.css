@@ -1,58 +1,71 @@
-/*Imported Work Sans Font from Google fonts */
+/* Imported Work Sans Font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap');
 
-/* shared styles */
+/* ---------------------------------------------------------------
+   SHARED STYLES
+--------------------------------------------------------------- */
 
+/* Universal Reset and Common Styles */
 * {
     margin: 0;
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Work Sans', sans-serif; /* Sets default font */
+    scroll-behavior: smooth; /* Smooth scrolling behavior */
 }
 
+/* Primary Button Styles */
 .btn-primary {
-    background-color: #FF900E;
-    color: #FFF;
-    padding: 15px 25px;
-    font-size: 1.25rem;
-    font-weight: 600;
-    border: 1px solid #FF900E;
-    border-radius: 8px;
-    cursor: pointer;
+    background-color: #FF900E; /* Button color */
+    color: #FFF; /* Text color */
+    padding: 15px 25px; /* Padding */
+    font-size: 1.25rem; /* Font size */
+    font-weight: 600; /* Font weight */
+    border: 1px solid #FF900E; /* Border color */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
 }
 
 .btn-primary:hover {
-    background-color: rgba(255, 144, 14, 0.10);
-    color: #FF900E;
+    background-color: rgba(255, 144, 14, 0.10); /* Hover background */
+    color: #FF900E; /* Hover text color */
 }
 
+/* Light Gray Text */
 .txt-light-gray {
     color: #727272;
 }
 
+/* Section Margin */
 section {
     margin-top: 100px;
 }
 
+/* Section Title */
 .section-title {
     color: #131313;
     font-weight: 700;
     font-size: 2.8rem;
 }
 
+/* Section Description */
 .section-description {
     margin: 20px 0;
 }
 
+/* Center Aligned Content */
 .center-aligned-content {
     max-width: 800px;
     text-align: center;
     margin: 0 auto;
 }
 
-/* header styles */
+/* ---------------------------------------------------------------
+   HEADER STYLES
+--------------------------------------------------------------- */
+
 header {
-    background: rgba(255, 144, 14, 0.10);
-    padding: 30px 200px;
-    margin-bottom: 80px;
+    background: rgba(255, 144, 14, 0.10); /* Background color */
+    padding: 30px 200px; /* Padding */
+    margin-bottom: 80px; /* Bottom margin */
 }
 
 header nav {
@@ -61,6 +74,7 @@ header nav {
     align-items: center;
 }
 
+/* Navigation Title */
 .nav-title {
     cursor: pointer;
     margin-top: 0px;
@@ -82,7 +96,58 @@ nav ul li a {
     text-decoration: none;
 }
 
-/* banner styles */
+/* ---------------------------------------------------------------
+   MODAL STYLES
+--------------------------------------------------------------- */
+
+/* Modal Container */
+#login-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    width: 90%; /* Default width for mobile */
+    max-width: 400px; /* Max width for larger screens */
+}
+
+/* Login Form Container */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Close Button */
+#close-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* Modal Form Inputs and Button */
+#login-form input, #login-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+#status-message {
+    text-align: center;
+}
+
+/* ---------------------------------------------------------------
+   BANNER STYLES
+--------------------------------------------------------------- */
 
 .banner-title {
     color: #131313;
@@ -95,13 +160,19 @@ nav ul li a {
     width: 100%;
 }
 
-/* main style */
+/* ---------------------------------------------------------------
+   MAIN SECTION STYLES
+--------------------------------------------------------------- */
+
 main {
     max-width: 1100px;
     margin: 0 auto;
 }
 
-/* teams section styles */
+/* ---------------------------------------------------------------
+   TEAMS SECTION STYLES
+--------------------------------------------------------------- */
+
 .teams-section {
     display: flex;
     justify-content: space-around;
@@ -126,15 +197,19 @@ main {
     color: #FF900E;
 }
 
-/* feature section styles */
+/* ---------------------------------------------------------------
+   FEATURE SECTION STYLES
+--------------------------------------------------------------- */
+
 .features {
     display: flex;
     gap: 50px;
 }
 
-.feature-img img{
+.feature-img img {
     height: 90%;
 }
+
 .feature-title {
     border-left: 5px solid #FF900E;
     padding-left: 20px;
@@ -152,7 +227,6 @@ main {
     position: relative;
     bottom: 50px;
     right: 40px;
-    box-sizing: border-box;
     width: 260px;
     color: #FFF;
     padding: 20px;
@@ -165,7 +239,10 @@ main {
     font-size: 3rem;
 }
 
-/* facts section styles */
+/* ---------------------------------------------------------------
+   FACTS SECTION STYLES
+--------------------------------------------------------------- */
+
 .facts-card-container {
     margin-top: 50px;
     display: flex;
@@ -188,12 +265,14 @@ main {
     margin: 10px 0;
 }
 
-.card-stats,
-.card-title {
+.card-stats, .card-title {
     font-weight: 600;
 }
 
-/* sponsor section styles */
+/* ---------------------------------------------------------------
+   SPONSORS SECTION STYLES
+--------------------------------------------------------------- */
+
 .sponsors {
     margin-top: 50px;
     display: flex;
@@ -202,7 +281,124 @@ main {
     gap: 60px;
 }
 
-/* footer section styles */
+/* ---------------------------------------------------------------
+   CONTACT SECTION STYLES
+--------------------------------------------------------------- */
+
+.contact-section {
+    padding: 40px 10%;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+.contact-section .section-title {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-section .section-description {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input, textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 15px;
+    margin: 10px 0;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #fff;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #FF900E;
+    box-shadow: 0 0 8px #d79345;
+    outline: none;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #aaa;
+}
+
+textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+button {
+    width: 100%;
+    max-width: 500px;
+    padding: 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* ---------------------------------------------------------------
+   BACK TO TOP BUTTON STYLES
+--------------------------------------------------------------- */
+
+/* Default style for the Back to Top button */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #FF900E;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    display: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#back-to-top:hover {
+    background-color: rgba(255, 144, 14, 0.10);
+    color: #FF900E;
+    border: 1px solid #FF900E;
+}
+
+/* When Back to Top button is visible */
+#back-to-top.show {
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+}
+
+#back-to-top.hide {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+/* ---------------------------------------------------------------
+   FOOTER STYLES
+--------------------------------------------------------------- */
+
 footer {
     max-width: 70%;
     margin: 100px auto;
@@ -218,37 +414,44 @@ footer p {
     text-align: center;
 }
 
-/* responsive media queries */
+/* ---------------------------------------------------------------
+   RESPONSIVE MEDIA QUERIES
+--------------------------------------------------------------- */
 
-/* mobile devices */
+/* Mobile Devices (max-width: 576px) */
 @media screen and (max-width: 576px) {
-
-    header,
-    .features,
-    .facts,
-    .sponsors-section
-    {
+    header, .features, .facts, .sponsors-section {
         padding: 20px;
     }
 
-    nav,
-    .teams-section,
-    .facts-card-container,
-    .features{
+    nav, .teams-section, .facts-card-container, .features {
         flex-direction: column;
+    }
+
+    #login-modal {
+        width: 80%; /* Almost full-width for mobile */
+        padding: 15px;
+    }
+
+    #login-form input, #login-form button {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .close-btn {
+        top: 5px;
+        right: 5px;
     }
 
     nav ul {
         margin-top: 20px;
-        padding-left: 0;
     }
 
     .feature-img img {
         width: 100%;
-        margin-left: 0;
     }
 
-    .ten-years-badge{
+    .ten-years-badge {
         right: 15px;
     }
 
@@ -260,10 +463,6 @@ footer p {
         grid-template-columns: 1fr;
     }
 
-    .teams-content {
-        margin-top: 30px;
-    }
-
     .sponsors {
         flex-direction: column;
     }
@@ -273,23 +472,27 @@ footer p {
     }
 }
 
-/* tablet or medium devices */
+/* Tablet or Medium Devices (min-width: 576px and max-width: 960px) */
 @media screen and (min-width: 576px) and (max-width: 960px) {
-
-    header,
-    .facts,
-    .features,
-    .sponsors-section{
+    header, .facts, .features, .sponsors-section {
         padding: 40px;
     }
 
-    nav,
-    .teams-section,
-    .features {
+    nav, .teams-section, .features {
         flex-direction: column;
     }
 
-    .ten-years-badge{
+    #login-modal {
+        width: 95%;
+        max-width: 350px;
+        padding: 20px;
+    }
+
+    #login-form input, #login-form button {
+        font-size: 14px;
+    }
+
+    .ten-years-badge {
         right: 30px;
     }
 
@@ -305,7 +508,6 @@ footer p {
 
     nav ul {
         margin-top: 20px;
-        padding-left: 0;
     }
 
     .sponsors {
